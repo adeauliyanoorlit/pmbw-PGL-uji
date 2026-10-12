@@ -1,0 +1,422 @@
+/* =====================================================
+   STYLE.CSS - Media Pembelajaran Persamaan Garis Lurus
+   ===================================================== */
+
+/* ---------- 1. VARIABEL WARNA (ubah di sini untuk ganti tema) ---------- */
+:root {
+    --warna-utama: #2563eb;
+    --warna-utama-gelap: #1e40af;
+    --warna-latar: #f1f5f9;
+    --warna-kartu: #ffffff;
+    --warna-teks: #1e293b;
+    --warna-teks-lembut: #64748b;
+    --warna-garis: #e2e8f0;
+    --warna-rumus: #eff6ff;
+    --warna-contoh: #fffbeb;
+    --warna-contoh-garis: #f59e0b;
+    --radius: 12px;
+    --bayangan: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- 2. RESET & DASAR ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* agar judul tidak tertutup navbar saat klik menu */
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--warna-teks);
+    background-color: var(--warna-latar);
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- 3. HEADER ---------- */
+.header {
+    background: linear-gradient(135deg, var(--warna-utama), var(--warna-utama-gelap));
+    color: #ffffff;
+    padding: 56px 0 48px;
+    text-align: center;
+}
+
+.header .label {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 4px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.header .subjudul {
+    max-width: 560px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* ---------- 4. NAVIGASI ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--warna-kartu);
+    border-bottom: 1px solid var(--warna-garis);
+    box-shadow: var(--bayangan);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    list-style: none;
+    padding: 8px 0;
+}
+
+.navbar a {
+    display: block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--warna-teks-lembut);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: var(--warna-rumus);
+    color: var(--warna-utama);
+}
+
+/* ---------- 5. KARTU MATERI ---------- */
+main {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.kartu {
+    background-color: var(--warna-kartu);
+    border-radius: var(--radius);
+    box-shadow: var(--bayangan);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+
+.kartu h2 {
+    font-size: 1.5rem;
+    color: var(--warna-utama-gelap);
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid var(--warna-utama);
+    display: inline-block;
+}
+
+.kartu h3 {
+    font-size: 1.15rem;
+    margin: 22px 0 8px;
+}
+
+.kartu p {
+    margin-bottom: 10px;
+}
+
+.kartu ul,
+.kartu ol {
+    padding-left: 24px;
+    margin-bottom: 10px;
+}
+
+.kartu li {
+    margin-bottom: 6px;
+}
+
+/* ---------- 6. KOTAK RUMUS ---------- */
+.rumus {
+    background-color: var(--warna-rumus);
+    border-left: 5px solid var(--warna-utama);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0 16px;
+    font-family: "Cambria Math", "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    overflow-x: auto;
+}
+
+/* ---------- 7. TABEL ---------- */
+.tabel-wrap {
+    overflow-x: auto;
+    margin: 12px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 10px 14px;
+    border: 1px solid var(--warna-garis);
+}
+
+thead th {
+    background-color: var(--warna-utama);
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--warna-latar);
+}
+
+tbody tr:hover {
+    background-color: var(--warna-rumus);
+}
+
+/* ---------- 8. JENIS GRADIEN (TAG WARNA) ---------- */
+.daftar-jenis {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+.daftar-jenis li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--warna-garis);
+}
+
+.tag {
+    min-width: 120px;
+    padding: 2px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tag-hijau { background-color: #dcfce7; color: #166534; }
+.tag-merah { background-color: #fee2e2; color: #991b1b; }
+.tag-biru  { background-color: #dbeafe; color: #1e40af; }
+.tag-abu   { background-color: #e2e8f0; color: #334155; }
+
+/* ---------- 9. CONTOH SOAL ---------- */
+.contoh {
+    background-color: var(--warna-contoh);
+    border-left: 5px solid var(--warna-contoh-garis);
+    border-radius: 8px;
+    padding: 4px 20px 12px;
+    margin-bottom: 18px;
+}
+
+.penyelesaian {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--warna-teks-lembut);
+}
+
+/* ---------- 10. LATIHAN & FORM ---------- */
+.soal li {
+    padding-left: 6px;
+    margin-bottom: 12px;
+}
+
+.form-jawaban {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-jawaban label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.form-jawaban input,
+.form-jawaban textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 2px solid var(--warna-garis);
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-jawaban input:focus,
+.form-jawaban textarea:focus {
+    outline: none;
+    border-color: var(--warna-utama);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-jawaban textarea {
+    resize: vertical;
+}
+
+/* ---------- 11. FOOTER ---------- */
+.footer {
+    background-color: var(--warna-teks);
+    color: #cbd5e1;
+    text-align: center;
+    padding: 22px 20px;
+    font-size: 0.9rem;
+}
+
+/* ---------- 12. RESPONSIF (HP & TABLET) ---------- */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        padding: 40px 0 34px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .kartu {
+        padding: 20px 18px;
+    }
+
+    .rumus {
+        font-size: 1.05rem;
+        padding: 12px 14px;
+    }
+
+    .navbar ul {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* menu bisa digeser ke samping di HP */
+    }
+
+    .navbar a {
+        white-space: nowrap;
+    }
+}
+
+/* ---------- 13. GRAFIK INTERAKTIF ---------- */
+[hidden] {
+    display: none !important;
+}
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.tab-btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 2px solid var(--warna-garis);
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: var(--warna-teks-lembut);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover {
+    border-color: var(--warna-utama);
+    color: var(--warna-utama);
+}
+
+.tab-btn.aktif {
+    background-color: var(--warna-utama);
+    border-color: var(--warna-utama);
+    color: #ffffff;
+}
+
+.panel {
+    background-color: var(--warna-latar);
+    border-radius: 8px;
+    padding: 14px 18px;
+}
+
+.kartu .panel p {
+    margin: 0;
+}
+
+.kontrol {
+    margin-bottom: 12px;
+}
+
+.kontrol:last-child {
+    margin-bottom: 0;
+}
+
+.kontrol label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.kontrol output {
+    color: var(--warna-utama);
+    font-weight: 700;
+}
+
+.kontrol input[type="range"] {
+    width: 100%;
+    accent-color: var(--warna-utama);
+}
+
+#grafik-svg {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 16px auto;
+    background-color: #ffffff;
+    border: 2px solid var(--warna-garis);
+    border-radius: 8px;
+    touch-action: none; /* agar menyeret titik tidak menggulir halaman di HP */
+}
+
+#grafik-svg.mode-titik {
+    cursor: grab;
+}
+
+/* Elemen di dalam grafik */
+.kisi         { stroke: #e2e8f0; stroke-width: 1; }
+.sumbu        { stroke: #334155; stroke-width: 2; }
+.label-sumbu  { font-size: 12px; fill: #64748b; }
+.nama-sumbu   { font-size: 15px; font-weight: bold; font-style: italic; fill: #334155; }
+.garis-grafik { stroke: #2563eb; stroke-width: 3.5; stroke-linecap: round; }
+.bantu        { stroke: #f59e0b; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+.label-bantu  { font-size: 13px; font-weight: 600; fill: #b45309; }
+.titik-a      { fill: #2563eb; stroke: #ffffff; stroke-width: 2; }
+.titik-b      { fill: #dc2626; stroke: #ffffff; stroke-width: 2; }
+.titik-c      { fill: #16a34a; stroke: #ffffff; stroke-width: 2; }
+.label-titik  { font-size: 14px; font-weight: bold; fill: #1e293b; }

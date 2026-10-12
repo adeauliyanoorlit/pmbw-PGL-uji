@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Matematika: Persamaan Garis Lurus</title>
+
+    <!-- Memanggil file CSS (harus satu folder dengan file ini) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <p class="label">Media Pembelajaran Matematika SMP</p>
+            <h1>Persamaan Garis Lurus</h1>
+            <p class="subjudul">Belajar gradien dan persamaan garis dengan langkah yang runtut dan mudah dipahami.</p>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGASI ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#tujuan">Tujuan</a></li>
+                <li><a href="#pengertian">Pengertian</a></li>
+                <li><a href="#gradien">Gradien</a></li>
+                <li><a href="#persamaan">Persamaan</a></li>
+                <li><a href="#grafik">Grafik</a></li>
+                <li><a href="#contoh">Contoh Soal</a></li>
+                <li><a href="#latihan">Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- ===== TUJUAN PEMBELAJARAN ===== -->
+        <section id="tujuan" class="kartu">
+            <h2>Tujuan Pembelajaran</h2>
+            <p>Setelah mempelajari materi ini, siswa diharapkan mampu:</p>
+            <ol>
+                <li>Menjelaskan pengertian garis lurus pada bidang koordinat.</li>
+                <li>Menentukan gradien suatu garis lurus.</li>
+                <li>Menentukan persamaan garis lurus.</li>
+                <li>Menyelesaikan masalah kontekstual yang berkaitan dengan garis lurus.</li>
+            </ol>
+        </section>
+
+        <!-- ===== PENGERTIAN ===== -->
+        <section id="pengertian" class="kartu">
+            <h2>Pengertian Garis Lurus</h2>
+            <p>
+                Garis lurus adalah kumpulan titik-titik yang membentuk lintasan lurus
+                dan dapat digambarkan pada bidang koordinat Kartesius
+                (sumbu-x dan sumbu-y).
+            </p>
+            <p>Contoh titik pada bidang koordinat:</p>
+            <div class="tabel-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titik</th>
+                            <th>Koordinat (x, y)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A</td><td>(0, 1)</td></tr>
+                        <tr><td>B</td><td>(1, 3)</td></tr>
+                        <tr><td>C</td><td>(2, 5)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===== GRADIEN ===== -->
+        <section id="gradien" class="kartu">
+            <h2>Gradien</h2>
+            <p>
+                Gradien (kemiringan) adalah ukuran kemiringan suatu garis.
+                Gradien dilambangkan dengan <strong>m</strong>.
+            </p>
+            <p>Jika garis melalui titik (x<sub>1</sub>, y<sub>1</sub>) dan (x<sub>2</sub>, y<sub>2</sub>), maka:</p>
+            <div class="rumus">
+                m = (y<sub>2</sub> − y<sub>1</sub>) / (x<sub>2</sub> − x<sub>1</sub>)
+            </div>
+
+            <h3>Jenis Gradien</h3>
+            <ul class="daftar-jenis">
+                <li><span class="tag tag-hijau">m &gt; 0</span> Garis miring ke kanan atas</li>
+                <li><span class="tag tag-merah">m &lt; 0</span> Garis miring ke kanan bawah</li>
+                <li><span class="tag tag-biru">m = 0</span> Garis mendatar (horizontal)</li>
+                <li><span class="tag tag-abu">tak terdefinisi</span> Garis tegak (vertikal)</li>
+            </ul>
+        </section>
+
+        <!-- ===== PERSAMAAN GARIS ===== -->
+        <section id="persamaan" class="kartu">
+            <h2>Persamaan Garis Lurus</h2>
+
+            <h3>1. Bentuk Umum</h3>
+            <div class="rumus">y = mx + c</div>
+            <p>dengan m adalah gradien dan c adalah titik potong garis terhadap sumbu-y.</p>
+
+            <h3>2. Melalui Titik (x<sub>1</sub>, y<sub>1</sub>) dengan Gradien m</h3>
+            <div class="rumus">y − y<sub>1</sub> = m(x − x<sub>1</sub>)</div>
+
+            <h3>3. Melalui Dua Titik</h3>
+            <div class="rumus">
+                (y − y<sub>1</sub>) / (y<sub>2</sub> − y<sub>1</sub>) =
+                (x − x<sub>1</sub>) / (x<sub>2</sub> − x<sub>1</sub>)
+            </div>
+        </section>
+
+        <!-- ===== GRAFIK INTERAKTIF ===== -->
+        <section id="grafik" class="kartu">
+            <h2>Grafik Interaktif</h2>
+            <p>Gunakan grafik di bawah ini untuk melihat bagaimana gradien dan titik memengaruhi bentuk garis lurus.</p>
+
+            <div class="tab">
+                <button type="button" class="tab-btn aktif" data-mode="slider">Atur m dan c</button>
+                <button type="button" class="tab-btn" data-mode="titik">Geser Titik A dan B</button>
+            </div>
+
+            <!-- Mode 1: slider gradien (m) dan titik potong sumbu-y (c) -->
+            <div id="panel-slider" class="panel">
+                <div class="kontrol">
+                    <label for="slider-m">Gradien (m): <output id="nilai-m">1</output></label>
+                    <input type="range" id="slider-m" min="-5" max="5" step="0.5" value="1">
+                </div>
+                <div class="kontrol">
+                    <label for="slider-c">Titik potong sumbu-y (c): <output id="nilai-c">0</output></label>
+                    <input type="range" id="slider-c" min="-8" max="8" step="1" value="0">
+                </div>
+            </div>
+
+            <!-- Mode 2: titik A dan B yang bisa digeser -->
+            <div id="panel-titik" class="panel" hidden>
+                <p class="petunjuk">Seret titik <strong>A</strong> (biru) dan titik <strong>B</strong> (merah) dengan mouse atau jari. Garis, gradien, dan persamaannya dihitung otomatis.</p>
+            </div>
+
+            <svg id="grafik-svg" viewBox="0 0 600 600" role="img" aria-label="Grafik garis lurus pada bidang koordinat"></svg>
+
+            <div class="rumus" id="hasil-persamaan" aria-live="polite"></div>
+            <p id="hasil-info" aria-live="polite"></p>
+        </section>
+
+        <!-- ===== CONTOH SOAL ===== -->
+        <section id="contoh" class="kartu">
+            <h2>Contoh Soal</h2>
+
+            <div class="contoh">
+                <h3>Contoh 1</h3>
+                <p>Tentukan gradien garis yang melalui titik A(1, 2) dan B(3, 8).</p>
+                <p class="penyelesaian">Penyelesaian:</p>
+                <p>
+                    m = (8 − 2) / (3 − 1)<br>
+                    m = 6 / 2<br>
+                    m = 3
+                </p>
+                <p>Jadi, gradien garis tersebut adalah <strong>3</strong>.</p>
+            </div>
+
+            <div class="contoh">
+                <h3>Contoh 2</h3>
+                <p>Tentukan persamaan garis yang bergradien 2 dan melalui titik (1, 4).</p>
+                <p class="penyelesaian">Penyelesaian:</p>
+                <p>
+                    y − 4 = 2(x − 1)<br>
+                    y − 4 = 2x − 2<br>
+                    y = 2x + 2
+                </p>
+                <p>Jadi, persamaan garisnya adalah <strong>y = 2x + 2</strong>.</p>
+            </div>
+        </section>
+
+        <!-- ===== LATIHAN ===== -->
+        <section id="latihan" class="kartu">
+            <h2>Latihan</h2>
+            <p>Kerjakan soal-soal berikut dengan teliti.</p>
+            <ol class="soal">
+                <li>Tentukan gradien garis yang melalui titik P(2, 1) dan Q(4, 7).</li>
+                <li>Tentukan persamaan garis yang bergradien 3 dan melalui titik (0, 5).</li>
+                <li>Tentukan persamaan garis yang melalui titik (1, 2) dan (3, 6).</li>
+                <li>
+                    Sebuah taksi online menarik tarif awal Rp5.000 dan
+                    Rp3.000 untuk setiap kilometer. Buatlah persamaan garis
+                    yang menyatakan hubungan antara jarak (x) dan biaya (y).
+                </li>
+            </ol>
+
+            <h3>Kolom Jawaban</h3>
+            <div class="form-jawaban">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Tulis nama kamu">
+
+                <label for="jawaban">Jawaban</label>
+                <textarea id="jawaban" name="jawaban" rows="6" placeholder="Tulis jawaban kamu di sini"></textarea>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 Media Pembelajaran Matematika - Persamaan Garis Lurus</p>
+    </footer>
+
+    <!-- Memanggil file JavaScript (harus satu folder dengan file ini) -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -29,6 +29,8 @@
                 <li><a href="#persamaan">Persamaan</a></li>
                 <li><a href="#grafik">Grafik</a></li>
                 <li><a href="#contoh">Contoh Soal</a></li>
+                <!-- TAMBAHAN BARU: menu Kuis -->
+                <li><a href="#kuis">Kuis</a></li>
                 <li><a href="#latihan">Latihan</a></li>
             </ul>
         </div>
@@ -153,26 +155,54 @@
             <div class="contoh">
                 <h3>Contoh 1</h3>
                 <p>Tentukan gradien garis yang melalui titik A(1, 2) dan B(3, 8).</p>
-                <p class="penyelesaian">Penyelesaian:</p>
-                <p>
-                    m = (8 − 2) / (3 − 1)<br>
-                    m = 6 / 2<br>
-                    m = 3
-                </p>
-                <p>Jadi, gradien garis tersebut adalah <strong>3</strong>.</p>
+
+                <!-- TAMBAHAN BARU: tombol penyelesaian (diatur oleh script.js bagian 11) -->
+                <button type="button" class="btn btn-solusi">Lihat Penyelesaian</button>
+                <div class="solusi" hidden>
+                    <p class="penyelesaian">Penyelesaian:</p>
+                    <p>
+                        m = (8 − 2) / (3 − 1)<br>
+                        m = 6 / 2<br>
+                        m = 3
+                    </p>
+                    <p>Jadi, gradien garis tersebut adalah <strong>3</strong>.</p>
+                </div>
             </div>
 
             <div class="contoh">
                 <h3>Contoh 2</h3>
                 <p>Tentukan persamaan garis yang bergradien 2 dan melalui titik (1, 4).</p>
-                <p class="penyelesaian">Penyelesaian:</p>
-                <p>
-                    y − 4 = 2(x − 1)<br>
-                    y − 4 = 2x − 2<br>
-                    y = 2x + 2
-                </p>
-                <p>Jadi, persamaan garisnya adalah <strong>y = 2x + 2</strong>.</p>
+
+                <!-- TAMBAHAN BARU: tombol penyelesaian (diatur oleh script.js bagian 11) -->
+                <button type="button" class="btn btn-solusi">Lihat Penyelesaian</button>
+                <div class="solusi" hidden>
+                    <p class="penyelesaian">Penyelesaian:</p>
+                    <p>
+                        y − 4 = 2(x − 1)<br>
+                        y − 4 = 2x − 2<br>
+                        y = 2x + 2
+                    </p>
+                    <p>Jadi, persamaan garisnya adalah <strong>y = 2x + 2</strong>.</p>
+                </div>
             </div>
+        </section>
+
+        <!-- ===== KUIS GRADIEN (TAMBAHAN BARU, diatur oleh script.js bagian 12) ===== -->
+        <section id="kuis" class="kartu">
+            <h2>Kuis Gradien</h2>
+            <p>Hitung gradien garis yang melalui dua titik berikut, lalu tekan <strong>Periksa</strong>. Jawaban boleh berupa bilangan bulat, pecahan (contoh: −1/2), atau desimal (contoh: 0.5).</p>
+
+            <p id="kuis-soal" class="kuis-soal"></p>
+
+            <div class="kuis-input">
+                <label for="kuis-jawaban">Jawabanmu (m)</label>
+                <input type="text" id="kuis-jawaban" placeholder="contoh: 2 atau −1/2" autocomplete="off">
+                <button type="button" id="kuis-periksa" class="btn">Periksa</button>
+                <button type="button" id="kuis-baru" class="btn btn-sekunder">Soal Baru</button>
+            </div>
+
+            <p id="kuis-umpan" class="umpan" aria-live="polite"></p>
+            <p class="skor">Skor: <strong id="kuis-skor">0</strong> benar dari <strong id="kuis-total">0</strong> soal</p>
         </section>
 
         <!-- ===== LATIHAN ===== -->

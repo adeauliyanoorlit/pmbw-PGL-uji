@@ -420,3 +420,103 @@ tbody tr:hover {
 .titik-b      { fill: #dc2626; stroke: #ffffff; stroke-width: 2; }
 .titik-c      { fill: #16a34a; stroke: #ffffff; stroke-width: 2; }
 .label-titik  { font-size: 14px; font-weight: bold; fill: #1e293b; }
+
+/* ---------- 14. TOMBOL, PENYELESAIAN, DAN KUIS (TAMBAHAN BARU) ---------- */
+.btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 9px 20px;
+    border: 2px solid var(--warna-utama);
+    border-radius: 999px;
+    background-color: var(--warna-utama);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--warna-utama-gelap);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-sekunder {
+    background-color: #ffffff;
+    color: var(--warna-utama);
+}
+
+.btn-sekunder:hover {
+    background-color: var(--warna-rumus);
+}
+
+.btn-solusi {
+    margin: 4px 0 10px;
+}
+
+.solusi {
+    border-top: 1px dashed var(--warna-contoh-garis);
+    padding-top: 8px;
+}
+
+.kuis-soal {
+    font-family: "Cambria Math", "Times New Roman", serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--warna-rumus);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 14px 0;
+}
+
+.kuis-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.kuis-input label {
+    width: 100%;
+    font-weight: 600;
+}
+
+.kuis-input input {
+    flex: 1 1 200px;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 2px solid var(--warna-garis);
+    border-radius: 8px;
+}
+
+.kuis-input input:focus {
+    outline: none;
+    border-color: var(--warna-utama);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.umpan {
+    margin-top: 14px;
+}
+
+.umpan.benar,
+.umpan.salah,
+.umpan.info {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 5px solid;
+}
+
+.umpan.benar { background-color: #dcfce7; color: #166534; }
+.umpan.salah { background-color: #fee2e2; color: #991b1b; }
+.umpan.info  { background-color: #fef9c3; color: #854d0e; }
+
+.skor {
+    margin-top: 12px;
+    color: var(--warna-teks-lembut);
+}
